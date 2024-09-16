@@ -8,17 +8,17 @@ class Solution {
             sign = "+";
         }
 
+        String arr[] = s.split(" ");
+
         for (int i  =0; i<s.length(); i++){
-            if(s.charAt(i)  ==   '\\s'){
-                continue;
-            }
-           
-            if(Character.isDigit(s.charAt(i))){
+          for(int j =0; j<arr[i].length; j++){
+           String str = arr[i];
+            if(Character.isDigit(str.charAt(j))){
                  if(s.charAt(i)== '0'){
                     continue;
                  }
                   num *= 10;
-                num += (int)s.charAt(i);
+                num += (int)str.charAt(j);
             }else{
                 if(num>0){
                     break;
@@ -27,6 +27,8 @@ class Solution {
             }
                
             }
+        }
+
               if(sign.equals("-")){
             return (-1*num);
         }
@@ -36,3 +38,4 @@ class Solution {
 
 
 }
+
