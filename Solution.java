@@ -10,7 +10,7 @@ class Solution {
 
         String arr[] = s.split(" ");
 
-        for (int i  =0; i<s.length(); i++){
+        for (int i  =0; i<arr.length; i++){
           for(int j =0; j<arr[i].length; j++){
            String str = arr[i];
             if(Character.isDigit(str.charAt(j))){
@@ -38,4 +38,5 @@ class Solution {
 
 
 }
+
 
