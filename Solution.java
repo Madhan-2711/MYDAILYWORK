@@ -1,7 +1,7 @@
 class Solution {
     int num  ;    
     public int myAtoi(String s) {
-        String sign = "-";
+        String sign = " ";
         if (s.contains("-")){
             sign = "-";
         }else{
@@ -11,12 +11,12 @@ class Solution {
         String arr[] = s.split(" ");
 
         for (int i  =0; i<arr.length; i++){
-          for(int j =0; j<arr[i].length; j++){
-           String str = arr[i];
+          String str = arr[i];
+          for(int j =0; j<str.length(); j++){
             if(Character.isDigit(str.charAt(j))){
                  if(s.charAt(i)== '0'){
                     continue;
-                 }
+                 } 
                   num *= 10;
                 num += (int)str.charAt(j);
             }else{
@@ -38,5 +38,6 @@ class Solution {
 
 
 }
+
 
 
